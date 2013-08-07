@@ -1,0 +1,12 @@
+>>> Warning 216 "test mode selection.c" Line 82(0,1): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 202 "test mode selection.c" Line 9(5,10): Variable never used:   count
+>>> Warning 202 "test mode selection.c" Line 9(11,14): Variable never used:   hit
+>>> Warning 202 "test mode selection.c" Line 10(7,15): Variable never used:   ramStart
+>>> Warning 202 "test mode selection.c" Line 11(8,14): Variable never used:   ramNow
+>>> Warning 202 "test mode selection.c" Line 14(7,12): Variable never used:   value
+>>> Warning 202 "test mode selection.c" Line 15(6,7): Variable never used:   i
+>>> Warning 202 "test mode selection.c" Line 15(8,9): Variable never used:   j
+>>> Warning 202 "test mode selection.c" Line 16(6,19): Variable never used:   addressEEPROM
+>>> Warning 202 "test mode selection.c" Line 17(7,17): Variable never used:   addressRAM
+      Memory usage:   ROM=1%      RAM=3% - 3%
+      0 Errors,  10 Warnings.

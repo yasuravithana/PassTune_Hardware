@@ -1,0 +1,25 @@
+[PROJECT]
+Target=E:\sem 3\EN\tronic project\c src\test\test.hex
+Development_Mode=
+Processor_Text=PIC18F452
+ToolSuite=CCS
+Processor=0x452F
+[E:\sem 3\EN\tronic project\c src\test\test]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=E:\sem 3\EN\tronic project\c src\test\test.c
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Units]
+Link=0
+Count=1
+1=E:\sem 3\EN\tronic project\c src\test\test
+[Opened Files]
+1=test mode selection.c
+2=
+3=

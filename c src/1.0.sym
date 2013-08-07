@@ -1,0 +1,118 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019-01C t
+01D     count
+01E     hit
+01F     timerReset
+020-021 ramStart
+022-023 ramNow
+024-027 touch
+028-02B value
+02C     i
+02D     j
+02E     addressEEPROM
+02F-030 addressRAM
+031     MAIN.@SCRATCH1
+031     storePassword.@SCRATCH1
+031     checkPassword.@SCRATCH1
+031     check.@SCRATCH1
+031     readInt.@SCRATCH1
+031     writeInt.@SCRATCH1
+032     @delay_ms1.P1
+032     MAIN.@SCRATCH2
+032     storePassword.@SCRATCH2
+032     checkPassword.@SCRATCH2
+032     check.@SCRATCH2
+032     readInt.@SCRATCH2
+033     readInt.@SCRATCH3
+034     EXT_isr.@SCRATCH1
+035     EXT_isr.@SCRATCH2
+F83     PSP_DATA
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+017C  @delay_ms1
+00D2  TIMER2_isr
+00FC  EXT_isr
+0170  EXT1_isr
+0176  EXT2_isr
+04B8  MAIN
+0282  storePassword
+0202  store
+042A  checkPassword
+03B6  check
+0364  readInt
+01A2  writeInt
+04B8  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    E:\sem 3\EN\tronic project\c src\
+
+Project Files:
+    1.0.c
+    1.0.h
+    C:\Program Files (x86)\CCS PICC\devices\18F452.h
+
+Units:
+    E:\sem 3\EN\tronic project\c src\1.0 (main)
+
+Compiler Settings:
+    Processor:      PIC18F452
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      1.0.err
+    Ext Symbols: 1.0.esym
+    INHX32:      1.0.hex
+    Symbols:     1.0.sym
+    List:        1.0.lst
+    Debug/COFF:  1.0.cof
+    Project:     1.0.PJT
+    Call Tree:   1.0.tre
+    Statistics:  1.0.sta

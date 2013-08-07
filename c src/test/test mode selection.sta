@@ -1,0 +1,50 @@
+
+ROM used: 440 (1%)
+          440 (1%) including unused fragments
+
+          1 Average locations per line
+          15 Average locations per statement
+
+RAM used: 45 (3%) at main() level
+          47 (3%) worst case
+
+Stack used: 3 worst case (out of 31 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   81    29 100  test mode selection.c
+   26     0   0  test timer.h
+  358     0   0  C:\Program Files (x86)\CCS PICC\devices\18F452.h
+----- -----
+  465    29 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     38   4   1             @delay_ms1
+0     22   2   0    17  1.3  TIMER2_isr
+0     30   3   0   113  1.7  EXT_isr
+0     30   3   0   113  1.7  EXT1_isr
+0      8   1   0    16  1.0  EXT2_isr
+0    106  12   0   270  2.3  MAIN
+
+Program metrics:
+    Functions               5
+    Statements              29
+    Comments                86
+    Volume (V)              763
+    Difficilty (D)          8.5
+    Effort to implement (E) 6522
+    Time to implement (T)   6 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    123
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-00006     0  4  
+00008-000D0   202  0  
+000D2-07FFE   234  32324  
+
+
+

@@ -1,0 +1,10 @@
+ÀÄtest timer
+   ÃÄMAIN  0/238  Ram=2
+   ³  ÃÄ??0??
+   ³  ÀÄstore  0/78  Ram=0
+   ³     ÀÄwriteInt  0/96  Ram=1
+   ³        ÀÄ@delay_ms1  0/40  Ram=1
+   ÃÄTIMER2_isr  0/22  Ram=0
+   ÃÄEXT_isr  0/6  Ram=0
+   ÃÄEXT1_isr  0/6  Ram=0
+   ÀÄEXT2_isr  0/6  Ram=0

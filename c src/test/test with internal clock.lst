@@ -1,0 +1,167 @@
+CCS PCH C Compiler, Version 4.114, 93460303               02-Apr-12 12:18
+
+               Filename: E:\sem 3\EN\tronic project\c src\test\test with internal clock.lst
+
+               ROM used: 166 bytes (1%)
+                         Largest free fragment is 32602
+               RAM used: 5 (0%) at main() level
+                         6 (0%) worst case
+               Stack:    1 locations
+
+*
+0000:  GOTO   002A
+.................... #include <test with internal clock.h> 
+.................... #include <18F452.h> 
+.................... //////// Standard Header file for the PIC18F452 device //////////////// 
+.................... #device PIC18F452 
+.................... #list 
+....................  
+.................... #device adc=16 
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES WDT128                	//Watch Dog Timer uses 1:128 Postscale 
+.................... #FUSES RC_IO                 	//Resistor/Capacitor Osc 
+.................... #FUSES NOOSCSEN              	//Oscillator switching is disabled, main oscillator is source 
+.................... #FUSES NOPUT                 	//No Power Up Timer 
+.................... #FUSES NOBROWNOUT            	//No brownout reset 
+.................... #FUSES BORV20                	//Brownout reset at 2.0V 
+.................... #FUSES STVREN                	//Stack full/underflow will cause reset 
+.................... #FUSES NOLVP                 	//No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES NODEBUG               	//No Debug mode for ICD 
+.................... #FUSES NOPROTECT             	//Code not protected from reading 
+.................... #FUSES NOCPB                 	//No Boot Block code protection 
+.................... #FUSES NOCPD                 	//No EE protection 
+.................... #FUSES NOWRT                 	//Program memory not write protected 
+.................... #FUSES NOWRTC                	//configuration not registers write protected 
+.................... #FUSES NOWRTB                	//Boot block not write protected 
+.................... #FUSES NOWRTD                	//Data EEPROM not write protected 
+.................... #FUSES NOEBTR                	//Memory not protected from table reads 
+.................... #FUSES NOEBTRB               	//Boot block not protected from table reads 
+....................  
+.................... #use delay(clock=20000000) 
+0004:  CLRF   FEA
+0006:  MOVLW  06
+0008:  MOVWF  FE9
+000A:  MOVF   FEF,W
+000C:  BZ    0028
+000E:  MOVLW  06
+0010:  MOVWF  01
+0012:  CLRF   00
+0014:  DECFSZ 00,F
+0016:  BRA    0014
+0018:  DECFSZ 01,F
+001A:  BRA    0012
+001C:  MOVLW  7B
+001E:  MOVWF  00
+0020:  DECFSZ 00,F
+0022:  BRA    0020
+0024:  DECFSZ FEF,F
+0026:  BRA    000E
+0028:  RETLW  00
+....................  
+....................  
+....................  
+....................  
+.................... void main() 
+.................... { 
+002A:  CLRF   FF8
+002C:  BCF    FD0.7
+002E:  CLRF   FEA
+0030:  CLRF   FE9
+0032:  BSF    FC1.0
+0034:  BSF    FC1.1
+0036:  BSF    FC1.2
+0038:  BCF    FC1.3
+....................  
+....................    setup_oscillator(OSC_NORMAL); 
+003A:  CLRF   FD3
+....................  
+....................  
+.................... while (true) 
+.................... { 
+....................    output_A(0xff); 
+003C:  CLRF   F92
+003E:  MOVLW  FF
+0040:  MOVWF  F89
+....................    output_B(0xff); 
+0042:  CLRF   F93
+0044:  MOVWF  F8A
+....................    output_C(0xff); 
+0046:  CLRF   F94
+0048:  MOVWF  F8B
+....................    output_D(0xff); 
+004A:  CLRF   F95
+004C:  MOVWF  F8C
+....................    output_E(0xff); 
+004E:  BCF    F96.0
+0050:  BCF    F96.1
+0052:  BCF    F96.2
+0054:  MOVWF  F8D
+....................    output_high(pin_C1); 
+0056:  BCF    F94.1
+0058:  BSF    F8B.1
+....................    output_high(pin_C0); 
+005A:  BCF    F94.0
+005C:  BSF    F8B.0
+....................    output_high(pin_A4); 
+005E:  BCF    F92.4
+0060:  BSF    F89.4
+....................     
+....................    Delay_ms(500); 
+0062:  MOVLW  02
+0064:  MOVWF  05
+0066:  MOVLW  FA
+0068:  MOVWF  06
+006A:  RCALL  0004
+006C:  DECFSZ 05,F
+006E:  BRA    0066
+....................    output_A(0x0); 
+0070:  CLRF   F92
+0072:  CLRF   F89
+....................    output_B(0x0); 
+0074:  CLRF   F93
+0076:  CLRF   F8A
+....................    output_C(0x0); 
+0078:  CLRF   F94
+007A:  CLRF   F8B
+....................    output_D(0x0); 
+007C:  CLRF   F95
+007E:  CLRF   F8C
+....................    output_E(0x0); 
+0080:  BCF    F96.0
+0082:  BCF    F96.1
+0084:  BCF    F96.2
+0086:  CLRF   F8D
+....................    output_low(pin_C1); 
+0088:  BCF    F94.1
+008A:  BCF    F8B.1
+....................    output_low(pin_C0); 
+008C:  BCF    F94.0
+008E:  BCF    F8B.0
+....................    output_low(pin_A4); 
+0090:  BCF    F92.4
+0092:  BCF    F89.4
+....................    Delay_ms(500); 
+0094:  MOVLW  02
+0096:  MOVWF  05
+0098:  MOVLW  FA
+009A:  MOVWF  06
+009C:  RCALL  0004
+009E:  DECFSZ 05,F
+00A0:  BRA    0098
+.................... } 
+00A2:  BRA    003C
+....................  
+....................  
+....................  
+.................... } 
+00A4:  SLEEP 
+
+Configuration Fuses:
+   Word  1: 2700   RC_IO NOOSCSEN
+   Word  2: 0E0D   NOPUT NOBROWNOUT BORV20 NOWDT WDT128
+   Word  3: 0100   CCP2C1
+   Word  4: 0081   STVREN NOLVP NODEBUG
+   Word  5: C00F   NOPROTECT NOCPB NOCPD
+   Word  6: E00F   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB
